@@ -80,6 +80,9 @@ public class StreamAPIPractice {
 		long longsum = numbers.parallelStream().mapToLong(Long::longValue).sum();
 		System.out.println(longsum);
 		
+		List<Long> numbers2 = LongStream.rangeClosed(1, 50000).boxed().collect(Collectors.toList());
+		long longsum2 = numbers.parallelStream().mapToLong(Long::longValue).sum();
+		System.out.println(longsum2);
 		
 	}
 }
